@@ -6,6 +6,13 @@
 a,
 a:focus,
 a:hover {
+  color: rgb(109, 158, 235);
+}
+
+/* FA Links */
+.fa,
+.fa:focus,
+.fa:hover {
   color: rgba(109, 158, 235, .5);
 }
 
@@ -30,6 +37,7 @@ a:hover {
 
 html,
 body {
+  font-family: Lato;
   height: 100%;
   background-color: rgb(235, 238, 242);
 }
@@ -97,7 +105,7 @@ body {
   padding: 0 1.5rem;
 }
 .cover .btn-lg {
-  padding: .75rem 1.25rem;
+  padding: .5rem 1.rem;
   font-weight: 700;
 }
 
