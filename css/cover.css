@@ -6,9 +6,13 @@
 a,
 a:focus,
 a:hover {
-  color: rgba(109, 158, 235, .5);
+  color: rgba(109, 158, 235, .75);
+  font-weight: bold;
 }
 
+p {
+  font-weight: normal;
+}
 /* Custom default button */
 .btn-secondary,
 .btn-secondary:focus {
