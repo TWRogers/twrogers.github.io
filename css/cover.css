@@ -6,13 +6,6 @@
 a,
 a:focus,
 a:hover {
-  color: rgb(109, 158, 235);
-}
-
-/* FA Links */
-.fa,
-.fa:focus,
-.fa:hover {
   color: rgba(109, 158, 235, .5);
 }
 
