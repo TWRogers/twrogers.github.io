@@ -10,23 +10,26 @@ a:hover {
   font-weight: bold;
 }
 
-p {
+/* p {
   font-weight: normal;
-}
+} */
 /* Custom default button */
+.btn,
 .btn-secondary,
-.btn-secondary:focus {
-  color: #6d9eeb;
-  text-shadow: none; /* Prevent inheritance from `body` */
-  background-color: rgb(240, 242, 245);
-  border: .2rem solid rgba(109, 158, 235, 0.25);
+.btn-secondary:active:focus:visited {
+  color: #6d9eeb !important;
+  text-shadow: none !important; /* Prevent inheritance from `body` */
+  box-shadow: none !important;
+  background-color: rgb(240, 242, 245) !important;
+  border: .2rem solid rgba(109, 158, 235, 0.25) !important;
 }
 
 .btn-secondary:hover {
-  color: #6d9eeb;
-  text-shadow: none; /* Prevent inheritance from `body` */
-  background-color: rgb(240, 242, 245);
-  border: .2rem solid rgba(109, 158, 235, 0.5);
+  color: #6d9eeb !important;
+  text-shadow: none !important; /* Prevent inheritance from `body` */
+  box-shadow: none !important;
+  background-color: rgb(240, 242, 245) !important;
+  border: .2rem solid rgba(109, 158, 235, 0.5) !important;
 }
 /*
  * Base structure
