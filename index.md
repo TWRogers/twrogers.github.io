@@ -3,6 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: default
+title: "Home"
 ---
 
 <img src="{{ './assets/images/me.jpg' | relative_url }}" class="rounded-circle" width="150px">

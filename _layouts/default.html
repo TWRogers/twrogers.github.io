@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="Tomas Rogers">
     <meta name="generator" content="Jekyll v3.8.5">
-    <title>Thomas Rogers</title>
+    <title>{{ page.title }}</title>
 
     <!-- Bootstrap core CSS -->
 
@@ -58,9 +58,9 @@
     <div class="inner">
       <h3 class="masthead-brand">Thomas Rogers</h3>
       <nav class="nav nav-masthead justify-content-center">
-        <a class="nav-link active" href="{{ './index.html' | relative_url }}">Home</a>
-        <a class="nav-link" href="{{ './projects.html' | relative_url }}"">Projects</a>
-        <a class="nav-link" href="{{ './blog.html' | relative_url }}">Blog</a>
+        <a class="nav-link{% if page.title == "Home" %} active{% endif %}" href="{{ './index.html' | relative_url }}">Home</a>
+        <a class="nav-link{% if page.title == "Projects" %} active{% endif %}" href="{{ './projects.html' | relative_url }}"">Projects</a>
+        <a class="nav-link{% if page.title == "Blog" %} active{% endif %}" href="{{ './blog.html' | relative_url }}">Blog</a>
         <a class="nav-link" href="#">Contact</a>
       </nav>
     </div>
