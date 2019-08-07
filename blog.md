@@ -5,13 +5,15 @@
 layout: default
 title: "Blog"
 ---
-
-
+<div class="row">
 {% for post in site.posts %}
 <div class="card">
-<div class="card-body">
-<h5 class="card-title"><a href="{{ post.url }}">{{ post.title }}</a></h5>
-</div>
+	<a href="{{ post.url }}">
+		<img class="card-img-top" src="{{ './assets/images/' | append: post.lead_image | relative_url }}" alt="{{ post.title }}">
+		<div class="card-body">
+			<h5 class="card-title">{{ post.title }}</h5>
+		</div>
+	</a>
 </div>
 {% endfor %}
-
+</div>
