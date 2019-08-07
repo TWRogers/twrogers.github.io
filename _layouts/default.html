@@ -1,5 +1,4 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <!-- saved from url=(0050)https://getbootstrap.com/docs/4.3/examples/cover/# -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
@@ -11,22 +10,22 @@
 
     <!-- Bootstrap core CSS -->
 
-    <link rel="apple-touch-icon" sizes="57x57" href="./static/icons/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="./static/icons/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="./static/icons/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="./static/icons/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="./static/icons/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="./static/icons/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="./static/icons/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="./static/icons/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="./static/icons/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="./static/icons/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./static/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="./static/icons/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./static/icons/favicon-16x16.png">
-    <link rel="manifest" href="./static/icons/manifest.json">
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ './assets/icons/apple-icon-57x57.png' | relative_url }}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{ './assets/icons/apple-icon-60x60.png' | relative_url }}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ './assets/icons/apple-icon-72x72.png' | relative_url }}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ './assets/icons/apple-icon-76x76.png' | relative_url }}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ './assets/icons/apple-icon-114x114.png' | relative_url }}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ './assets/icons/apple-icon-120x120.png' | relative_url }}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ './assets/icons/apple-icon-144x144.png' | relative_url }}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ './assets/icons/apple-icon-152x152.png' | relative_url }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ './assets/icons/apple-icon-180x180.png' | relative_url }}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ './assets/icons/android-icon-192x192.png' | relative_url }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ './assets/icons/favicon-32x32.png' | relative_url }}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ './assets/icons/favicon-96x96.png' | relative_url }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ './assets/icons/favicon-16x16.png' | relative_url }}">
+    <link rel="manifest" href="{{ './assets/icons/manifest.json' | relative_url }}">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="./static/icons/ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="{{ './assets/icons/ms-icon-144x144.png' | relative_url }}">
     <meta name="theme-color" content="#ffffff">
 
     <link rel="stylesheet"
@@ -51,7 +50,7 @@
       }
     </style>
     <!-- Custom styles for this template -->
-    <link href="./css/cover.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ './assets/css/cover.css' | relative_url }}" />
   </head>
   <body class="text-center">
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
@@ -59,24 +58,16 @@
     <div class="inner">
       <h3 class="masthead-brand">Thomas Rogers</h3>
       <nav class="nav nav-masthead justify-content-center">
-        <a class="nav-link active" href="#">Home</a>
-        <a class="nav-link" href="./projects.html">Projects</a>
-        <a class="nav-link" href="#">Blog</a>
+        <a class="nav-link active" href="{{ './index.html' | relative_url }}">Home</a>
+        <a class="nav-link" href="{{ './projects.html' | relative_url }}"">Projects</a>
+        <a class="nav-link" href="{{ './blog.html' | relative_url }}">Blog</a>
         <a class="nav-link" href="#">Contact</a>
       </nav>
     </div>
   </header>
 
   <main role="main" class="inner cover">
-    <img src="./static/me.jpg" class="rounded-circle" width="150px">
-    <br></br>
-    <h1 class="cover-heading">About Me</h1>
-    <p class="lead">Deep Learning Practitioner</p>
-      <p>I am currently Chief Artificial Intelligence Officer at
-        <a href="https://visulytix.com/">Visulytix</a> where I oversee the
-        translation of AI research and proof of concepts into software products in
-        ophthalmology.</p>
-      <a href="./static/thomas_rogers_cv.pdf" class="btn btn-lg btn-secondary"><i class="fa fa-download" aria-hidden="true"></i>&nbsp; CV</a>
+    {{ content }}
   </main>
 
   <footer class="mastfoot mt-auto">
