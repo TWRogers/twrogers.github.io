@@ -1,25 +1,20 @@
 /*
  * Globals
  */
-
-.text-muted {
-  font-style: italic;
-}
-
 .middle-bottom {
   position: absolute;
   background-color: white;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-top: 2.5px;
+  padding-bottom: 2px;
+  padding-left: 5px;
+  padding-right: 5px;
   border-radius: 5px;
-  bottom: 10px;
-  left: 50%;
-  transform: translate(-50%, 50%);
-  border: .2rem solid rgba(109, 158, 235, 0.25) !important;
+  top: 0%;
+  left: 0%;
+  border: .05rem solid rgba(109, 158, 235, 0.25) !important;
   color: #6d9eeb;
   font-weight: 700;
+  font-size: 12px;
 }
 
 /* Links */

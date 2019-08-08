@@ -24,7 +24,7 @@ title: "Blog"
         </div>
     </div>
     <div class="card-footer">
-        <small class="text-muted">Published on {{ post.date | date: '%d %B %Y' }} by {{ post.author }}</small>
+        <small class="text-muted">Published on <b>{{ post.date | date: '%d %B %Y' }}</b> by <b>{{ post.author }}</b></small>
     </div>
 </div>
 <br>
