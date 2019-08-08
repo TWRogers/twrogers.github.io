@@ -6,9 +6,10 @@ layout: default
     <div class="card-horizontal">
         <div class="img-square-wrapper">
             <img src="{{ './assets/images/' | append: page.lead_image | relative_url }}" alt="{{ page.title }}">
+            {% if page.part %}<div class="middle-bottom">Part {{page.part}}</div>{% endif %}
         </div>
         <div class="card-body card-body-left">
-            <h4>{{ page.title }}</h4>
+            <h4>{{ page.title }} {% if page.part %}<small>(Part {{page.part}}){% endif %}</small></h4>
             <p><b>Abstract: </b>{{ page.abstract }}</p>
         </div>
     </div>

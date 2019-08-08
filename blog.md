@@ -14,10 +14,11 @@ title: "Blog"
         <div class="img-square-wrapper">
 			<a href="{{ post.url }}">
             <img src="{{ './assets/images/' | append: post.lead_image | relative_url }}" alt="{{ post.title }}">
-			</a>
+            </a>
+            {% if post.part %}<div class="middle-bottom">Part {{post.part}}</div>{% endif %}
         </div>
         <div class="card-body card-body-left">
-            <h4>{{ post.title }}</h4>
+            <h4>{{ post.title }} {% if post.part %}<small>(Part {{post.part}}){% endif %}</small></h4>
             <p><b>Abstract: </b>{{ post.abstract }}</p>
 			<a href="{{ post.url }}" class="btn btn-secondary">Read More</a>
         </div>
@@ -26,5 +27,6 @@ title: "Blog"
         <small class="text-muted">Published on {{ post.date | date: '%d %B %Y' }} by {{ post.author }}</small>
     </div>
 </div>
+<br>
 {% endfor %}
 </div>
