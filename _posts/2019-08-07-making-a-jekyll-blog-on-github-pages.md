@@ -6,7 +6,7 @@ date:   2019-08-07
 categories: [HTML, Jekyll, Frontend]
 author: Thomas W. Rogers
 lead_image: github_jekyll.png
-further_reading: [["Rouge", "http://rouge.jneen.net/"], ["Syntax Highlighting", "https://mycyberuniverse.com/en-gb/syntax-highlighting-jekyll.html"], ["TOC", "https://github.com/allejo/jekyll-toc"]]
+further_reading: [["Blog Repo", "https://github.com/TWRogers/twrogers.github.io"], ["Rouge", "http://rouge.jneen.net/"], ["Syntax Highlighting", "https://mycyberuniverse.com/en-gb/syntax-highlighting-jekyll.html"], ["TOC", "https://github.com/allejo/jekyll-toc"], ["Cover Template", "https://getbootstrap.com/docs/4.0/examples/cover/#"]]
 ---
 ## GitHub Pages
 [GitHub Pages](https://pages.github.com/) offers a great, free, way of hosting your personal website or blog. Most other free services I've encountered have slow page loading times, 
@@ -26,8 +26,22 @@ Unfortunately, deploying standard database technologies such as MySQL or MongoDB
 ## Statically Generated Websites
 
 ## Building a Basic Website
+There is no point re-inventing the wheel when it comes to website development. Fine-tuning minute details such as responsiveness, shadows and paddings is all fine if you have the time, but otherwise it is just duplicating the efforts of experienced open-source developers who have spent many hours perfecting styles and layouts for the community.
+
+I decided to base my blog on [Bootstrap](https://getbootstrap.com/). 
 
 ### Bootstrap
+Bootstrap is an open-source CSS framework, originally developed by Twitter. It is excellent for creating responsive websites that look and feel great across a range of devices.
+
+I chose the [Cover template](https://getbootstrap.com/docs/4.0/examples/cover/#) as my starting point for this blog. I like that it is clean and simple. 
+
+#### Navigation Bar
+
+#### Modifying Colors
+
+#### Changing Font
+
+#### Adding Social Media Icons
 
 ## Jekyll
 ### Getting Started
