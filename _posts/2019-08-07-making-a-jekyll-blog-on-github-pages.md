@@ -6,6 +6,7 @@ date:   2019-08-07
 categories: frontend
 author: Thomas W. Rogers
 lead_image: github_jekyll.png
+further_reading: [["Syntax Highlighting", "https://mycyberuniverse.com/en-gb/syntax-highlighting-jekyll.html"]]
 ---
 <br>
 ## GitHub Pages
@@ -34,3 +35,8 @@ Unfortunately, deploying standard database technologies such as MySQL or MongoDB
 ### Layouts
 ### Posts
 ### Navigation
+### Syntax Highlighting
+```python
+s = "Python syntax highlighting"
+print s
+```
