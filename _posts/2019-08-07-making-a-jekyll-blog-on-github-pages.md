@@ -9,11 +9,13 @@ lead_image: github_jekyll.png
 further_reading: [["Blog Repo", "https://github.com/TWRogers/twrogers.github.io"], ["Rouge", "http://rouge.jneen.net/"], ["Syntax Highlighting", "https://mycyberuniverse.com/en-gb/syntax-highlighting-jekyll.html"], ["TOC", "https://github.com/allejo/jekyll-toc"], ["Cover Template", "https://getbootstrap.com/docs/4.0/examples/cover/#"]]
 ---
 ## GitHub Pages
-[GitHub Pages](https://pages.github.com/) offers a great, free, way of hosting your personal website or blog. Most other free services I've encountered have slow page loading times, 
-force you to display heavy advertising, or give you a really horrible url. GitHub Pages also has the advantage of showing potential employers and recruiters 
-that you developed the website yourself, and didn't just throw your content into a website generator.
+[GitHub Pages](https://pages.github.com/) offers a great, free, way of hosting your personal website or blog. Most other free services I've encountered have **slow response times**, 
+force you to display **horrendous advertising**, or do not allow you to use your own domain name. 
 
-However, serving a blog using GitHub Pages can be difficult. Blogs often require some basic database system for storing data on the blog post, including information such as:
+It is surprising, therefore, that GitHub Pages does not even feature in most 
+[free webhost reviews](https://www.ukwebhostreview.com/free-web-hosting/). This is likely due to GitHub Pages being slightly more challenging to host more complex sites such as blogs. 
+
+Serving a blog using GitHub Pages can be difficult. Blogs often require some basic database system for storing data on the blog post, including information such as:
 
 * Author
 * Title
@@ -21,27 +23,51 @@ However, serving a blog using GitHub Pages can be difficult. Blogs often require
 * Text
 * Date
 
-Unfortunately, deploying standard database technologies such as MySQL or MongoDB is not possible on GitHub Pages.
+Unfortunately, deploying standard database technologies such as MySQL or MongoDB is not possible on GitHub Pages. Websites on GitHub Pages must be **statically generated**.
 
 ## Statically Generated Websites
 
-## Building a Basic Website
-There is no point re-inventing the wheel when it comes to website development. Fine-tuning minute details such as responsiveness, shadows and paddings is all fine if you have the time, but otherwise it is just duplicating the efforts of experienced open-source developers who have spent many hours perfecting styles and layouts for the community.
+## Building a Basic Static Website
+There is **no point re-inventing the wheel** when it comes to website development. Fine-tuning minute details such as responsiveness, shadows and paddings is all fine if you have the time, but otherwise it is just duplicating the efforts of experienced open-source developers who have spent many hours perfecting styles and layouts for the community.
 
 I decided to base my blog on [Bootstrap](https://getbootstrap.com/). 
 
 ### Bootstrap
-Bootstrap is an open-source CSS framework, originally developed by Twitter. It is excellent for creating responsive websites that look and feel great across a range of devices.
+Bootstrap is an **open-source CSS framework**, originally developed by Twitter. It is excellent for creating *responsive* websites that look and feel great across a range of devices.
 
-I chose the [Cover template](https://getbootstrap.com/docs/4.0/examples/cover/#) as my starting point for this blog. I like that it is clean and simple. 
-
-#### Navigation Bar
+I chose the [Cover template](https://getbootstrap.com/docs/4.0/examples/cover/#) as my starting point for this blog. I like that it is **clean and simple**. 
 
 #### Modifying Colors
 
-#### Changing Font
+
+#### Navigation Bar
+
+
+#### Mixing up the Fontage
+I wasn't happy with the default font used by the Cover template, it seems too "blocky" to me. So I headed over to [Google Fonts](https://fonts.google.com/) to find a new one.
+
+I have a particular affinity to the [Lato](https://fonts.google.com/?query=lato), as it was selected by my friend [@WebmaestroFR](https://twitter.com/webmaestrofr?lang=en) as the font face for [Visulytix's](http://visulytix.com) visual identity. 
+
+The Google Fonts API, makes it incredibly simple to use their fonts on your website. You simply have to `link` to it in your HTML as follows.
+
+```html
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato" />
+```
+
+And then update the `font-family` in the `<body>` like so:
+
+```css
+body {
+  ...
+  font-family: Lato;
+  ...
+}
+```
+
+Instantly, all of the fonts in the Cover Template are replaced with beautiful **Lato**.
 
 #### Adding Social Media Icons
+#### Spying on your Guests with Google Analytics
 
 ## Jekyll
 ### Getting Started
@@ -67,6 +93,8 @@ I specify the port `4001`, because the default port `4000` is in use by somethin
 That's it, we now have a Jekyll site being served locally at [http://127.0.0.1:4001/](http://127.0.0.1:4001/).
 
 ### Layouts
+#### SASS and SCSS
+
 ### Pages and Front Matter
 
 
