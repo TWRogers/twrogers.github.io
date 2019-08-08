@@ -6,7 +6,7 @@ date:   2019-08-07
 categories: [HTML, Jekyll, Frontend]
 author: Thomas W. Rogers
 lead_image: github_jekyll.png
-further_reading: [["Blog Repo", "https://github.com/TWRogers/twrogers.github.io"], ["Rouge", "http://rouge.jneen.net/"], ["Syntax Highlighting", "https://mycyberuniverse.com/en-gb/syntax-highlighting-jekyll.html"], ["TOC", "https://github.com/allejo/jekyll-toc"], ["Cover Template", "https://getbootstrap.com/docs/4.0/examples/cover/#"]]
+further_reading: [["Blog Repo", "https://github.com/TWRogers/twrogers.github.io"], ["Jekyll", "https://jekyllrb.com/"], ["Rouge", "http://rouge.jneen.net/"], ["Syntax Highlighting", "https://mycyberuniverse.com/en-gb/syntax-highlighting-jekyll.html"], ["TOC", "https://github.com/allejo/jekyll-toc"], ["Cover Template", "https://getbootstrap.com/docs/4.0/examples/cover/#"]]
 ---
 ## GitHub Pages
 [GitHub Pages](https://pages.github.com/) offers a great, free, way of hosting your personal website or blog. Most other free services I've encountered have **slow response times**, 
@@ -15,20 +15,29 @@ force you to display **horrendous advertising**, or do not allow you to use your
 It is surprising, therefore, that GitHub Pages does not even feature in most 
 [free webhost reviews](https://www.ukwebhostreview.com/free-web-hosting/). This is likely due to GitHub Pages being slightly more challenging to host more complex sites such as blogs. 
 
-Serving a blog using GitHub Pages can be difficult. Blogs often require some basic database system for storing data on the blog post, including information such as:
+Serving a blog using GitHub Pages can be difficult. Blogs often require some **basic database system** for storing data on the blog post, including information such as:
 
-* Author
 * Title
 * Images
 * Text
 * Date
+* Name (of the poor unfortunate soul who **selflessly** dedicated hours of their life to writing the post).
 
 Unfortunately, deploying standard database technologies such as MySQL or MongoDB is not possible on GitHub Pages. Websites on GitHub Pages must be **statically generated**.
 
-## Statically Generated Websites
+## Statically Generated Websites are not so Static
+You may have wondered why one would want to be **static** rather than _dynamic_. What a queer specimen they must be.
 
-## Building a Basic Static Website
-There is **no point re-inventing the wheel** when it comes to website development. Fine-tuning minute details such as responsiveness, shadows and paddings is all fine if you have the time, but otherwise it is just duplicating the efforts of experienced open-source developers who have spent many hours perfecting styles and layouts for the community.
+Well, it turns out, rather ironically, that **static** websites are often faster than _dynamic_ ones. This is because all the server has to think about is returning files.
+
+It does not have to create anything on the fly, everything already exists when you, yes you intrepid blog reader, **make a request** to receive a blog post to read.
+
+Static site generators such as [Jekyll](https://jekyllrb.com/) are used to generate a whole website, ready for serving.
+
+## Building a Vanilla Static Website
+There is **no point re-inventing the wheel** when it comes to website development. Fine-tuning minute details such as responsiveness, shadows and paddings is all fine if you have the time. 
+
+Otherwise it is just duplicating the efforts of experienced open-source developers who have spent **many hours in a rabid and coffee-fueled state of existence**, simply to perfect styles and layouts for the community.
 
 I decided to base my blog on [Bootstrap](https://getbootstrap.com/). 
 
@@ -68,6 +77,23 @@ Instantly, all of the fonts in the Cover Template are replaced with beautiful **
 
 #### Adding Social Media Icons
 #### Spying on your Guests with Google Analytics
+If you're nosey like me, then you might consider setting up [Google Analytics](https://analytics.google.com) on your blog. This will allow you to see your website footfall, which blog articles are most popular, and **how often your mum checks up on you**.
+
+So go ahead and create an account, it is very simple. You will be given a code snippet such as this:
+
+```html
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-xxxxxxxx-n"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-xxxxxxxx-n');
+</script>
+```
+Which you paste somewhere within the `<head>` of your HTML files.
+
+This would be **pretty burdensome** to copy into every single HTML page, and Jekyll's layouts will later become your best friend.
 
 ## Jekyll
 ### Getting Started
