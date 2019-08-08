@@ -5,7 +5,7 @@ abstract: "Creating a statically served blog from scratch on GitHub Pages can be
 date:   2019-08-07
 categories: frontend
 author: Thomas W. Rogers
-lead_image: github_jekyll.jpg
+lead_image: github_jekyll.png
 ---
 <br>
 ## GitHub Pages
