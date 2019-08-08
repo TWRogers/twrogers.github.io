@@ -17,13 +17,22 @@ layout: default
     </div>
 </div>
 <div class="page">
-<div style="text-align: left; font-size: large">
-{{ content }}
-<h2>Futher Reading and Links</h2>
+<br>
+<h2>Contents</h2>
+{% include toc.html html=content %}
+</div>
+
+<div class="page">
+<br>
+<h2>Futher Reading & Resources</h2>
 <ol>
 {% for reading in page.further_reading %}
 <li><b>{{ reading[0] }}: </b><br><a href="{{ reading[1] }}">{{ reading[1] }}</a></li>
 {% endfor %}
 </ol>
 </div>
+
+<div class="page">
+<br>
+{{ content }}
 </div>

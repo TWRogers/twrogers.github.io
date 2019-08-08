@@ -10,6 +10,15 @@ a:hover {
   font-weight: bold;
 }
 
+ul, ol {
+  padding-left: 30px;
+  color: #434343;
+}
+
+ul li ul {
+  list-style-type: square;
+}
+
 .page {
 	background: rgb(248, 248, 248); 
 	border-radius: 5px; 
@@ -17,6 +26,7 @@ a:hover {
 	padding-right: 30px; 
 	margin-top: 10px;
 	padding-bottom: 10px; 
+  text-align: left;
 }
 
 /* p {
