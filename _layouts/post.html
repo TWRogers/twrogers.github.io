@@ -1,6 +1,21 @@
 ---
 layout: default
 ---
-<img class="post-lead-img" src="{{ './assets/images/' | append: page.lead_image | relative_url }}"></img>
-<h2 class="cover-heading">{{ page.title }}</h2>
+<div class="card">
+    <div class="card-horizontal">
+        <div class="img-square-wrapper">
+            <img class="" src="{{ './assets/images/' | append: page.lead_image | relative_url }}" alt="{{ page.title }}">
+        </div>
+        <div class="card-body card-body-left">
+            <h4>{{ page.title }}</h4>
+            <p><b>Abstract: </b>{{ page.abstract }}</p>
+        </div>
+    </div>
+    <div class="card-footer">
+        <small class="text-muted">Published on {{ page.date | date: '%d %B %Y' }} by {{ page.author }}</small>
+    </div>
+</div>
+
+<div style="text-align: left; font-size: large">
 {{ content }}
+</div>

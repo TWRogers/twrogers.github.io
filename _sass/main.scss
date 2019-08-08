@@ -59,6 +59,35 @@ body {
 } */
 
 .card {
+ 	background-color: rgb(248, 248, 248);
+}
+
+.card-horizontal {
+    display: flex;
+    flex: 1 1 auto;
+}
+
+.card-footer,
+.card-body-left {
+	text-align: left;
+}
+
+.card-header {
+	padding: 0px;
+	margin: 0px;
+}
+
+.img-square-wrapper {
+	background-color: rgb(255, 255, 255);
+    vertical-align: middle;
+}
+
+.img-square-wrapper img {
+	width: 150px;
+	max-width: 150px;
+}
+
+.card-small {
   background-color: rgb(248, 248, 248);
   width: 14rem;
   margin: 1rem auto;
@@ -71,8 +100,7 @@ body {
 }
 
 .post-lead-img {
-	height: 350px;
-	border-radius: 50%;
+	width: 250px;
 }
 /*
  * Header

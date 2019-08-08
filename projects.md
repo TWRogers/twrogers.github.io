@@ -10,7 +10,7 @@ title: "Projects"
 <p>Here are some open source projects I have worked on.</p>
 <h3 class="cover-heading">Computational Physics</h3>
 <div class="row">
-    <div class="card">
+    <div class="card card-small">
   <img class="card-img-top" src="./assets/images/dmqmc.jpg" alt="Density Matrix Quantum Monte Carlo and the HANDE code">
   <div class="card-body">
     <h5 class="card-title">Density Matrix Quantum Monte Carlo</h5>
@@ -22,7 +22,7 @@ title: "Projects"
   </div>
 </div>
 
-<div class="card">
+<div class="card card-small">
 <img class="card-img-top" src="./assets/images/double_pendulum.jpg" alt="Simulating the dynamics of a double pendulum">
 <div class="card-body">
 <h5 class="card-title">Chaotic Dynamics of a Double Pendulum</h5>
@@ -31,7 +31,7 @@ title: "Projects"
 <a href="https://github.com/TWRogers/DoublePendulumSimulation/blob/master/pendulum_report/Project_A_Report.pdf"><i class="fa fa-file" aria-hidden="true"></i></a> &nbsp;
 </div>
 </div>
-<div class="card">
+<div class="card card-small">
 <img class="card-img-top" src="./assets/images/gravity.png" alt="Simulating N-body Newtonian gravity">
 <div class="card-body">
 <h5 class="card-title">N-body Newtonian Gravity</h5>
