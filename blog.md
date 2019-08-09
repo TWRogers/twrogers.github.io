@@ -24,7 +24,14 @@ title: "Blog"
         </div>
     </div>
     <div class="card-footer">
-        <small class="text-muted">Published on <b>{{ post.date | date: '%d %B %Y' }}</b> by <b>{{ post.author }}</b></small>
+        <small class="text-muted">Published on <b>{{ post.date | date: '%d %B %Y' }}</b> by <b>{{ post.author }}</b>
+            {% if post.categories %}
+            &nbsp;&nbsp;|&nbsp;&nbsp; Categories:&nbsp;&nbsp; 
+                {% for category in post.categories %}
+                    <b>{{ category}}</b>&nbsp;&nbsp;
+                {% endfor %}
+            {% endif %}
+        </small>
     </div>
 </div>
 <br>

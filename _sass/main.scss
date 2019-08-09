@@ -96,11 +96,17 @@ body {
 
 .card {
  	background-color: rgb(248, 248, 248);
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 .card-horizontal {
     display: flex;
     flex: 1 1 auto;
+}
+
+.card-footer {
+  padding: 10px 20px;
 }
 
 .card-footer,
