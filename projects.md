@@ -44,3 +44,9 @@ abstract: "Selection of Thomas Rogers' projects in machine learning, software en
 </div>
 </div>
 </div>
+
+<h2 class="cover-heading">Publications</h2>
+<p>Here are some some publications.</p>
+<div class="row">
+{% include publications.html %}
+</div>

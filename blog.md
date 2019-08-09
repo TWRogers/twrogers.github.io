@@ -42,3 +42,6 @@ This lead me down a tumultuous rabbit hole, and who knows how far it could go? I
 <br>
 {% endfor %}
 </div>
+
+{% include publications.html %}
+
