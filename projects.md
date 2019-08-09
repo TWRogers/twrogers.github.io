@@ -45,6 +45,17 @@ abstract: "Selection of Thomas Rogers' projects in machine learning, software en
 </div>
 </div>
 <br>
+<h3 class="cover-heading">Other</h3>
+<div class="row">
+    <div class="card card-small">
+  <img class="card-img-top" src="./assets/images/scholar-exporter.png" alt="Python-based Google Scholar Profile Exporter for Static HTML Sites.">
+  <div class="card-body">
+    <h5 class="card-title">Google Scholar Profile to HTML</h5>
+    <a href="https://github.com/TWRogers/google-scholar-export"><i class="fa fa-github" aria-hidden="true"></i></a>
+  </div>
+</div>
+</div>
+<br>
 <h2 class="cover-heading">Publications</h2>
 <p>Here are some some publications.</p>
 <div class="row">
