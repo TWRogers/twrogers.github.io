@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Making a Jekyll Blog on GitHub Pages"
-abstract: "Creating a statically served blog from scratch on GitHub Pages can be tricky for a beginner in HTML/CSS. Here's my experience on how I dealt with it."
+abstract: "Creating a statically served blog from scratch on GitHub Pages can be tricky for a beginner in HTML/CSS. In this part, I walk through my experience in setting up a static Bootstrap website."
 date:   2019-08-07
 categories: [HTML, Jekyll, Frontend]
 author: Thomas W. Rogers
@@ -14,9 +14,9 @@ part: 1
 force you to display **horrendous advertising**, or do not allow you to use your own domain name. 
 
 It is surprising, therefore, that GitHub Pages does not even feature in most 
-[free webhost reviews](https://www.ukwebhostreview.com/free-web-hosting/). This is likely due to GitHub Pages being slightly more challenging to host more complex sites such as blogs. 
+[free webhost reviews](https://www.ukwebhostreview.com/free-web-hosting/). 
 
-Serving a blog using GitHub Pages can be difficult. Blogs often require some **basic database system** for storing data on the blog post, including information such as:
+This is probably because serving a more complex website such as a blog using GitHub Pages can be difficult. Blogs often require some **basic database system** for storing data on the blog post, including information such as:
 
 * Title
 * Images
@@ -24,14 +24,14 @@ Serving a blog using GitHub Pages can be difficult. Blogs often require some **b
 * Date
 * Name (of the poor unfortunate soul who **selflessly** dedicated hours of their life to writing the post).
 
-Unfortunately, deploying standard database technologies such as MySQL or MongoDB is not possible on GitHub Pages. Websites on GitHub Pages must be **statically generated**.
+Unfortunately, deploying standard database technologies such as [MySQL](https://www.mysql.com/) or [MongoDB](https://www.mongodb.com/) is not possible on GitHub Pages. Websites on GitHub Pages must be **statically generated**.
 
 ## Statically Generated Websites are not so Static
-You may have wondered why one would want to be **static** rather than _dynamic_. What a queer specimen one must be?
+You may have wondered why one would want to be **static** rather than _dynamic_. What an odd specimen one must be?
 
 Well, it turns out, rather ironically, that **static** websites are often faster than _dynamic_ ones. This is because all the server has to think about is returning files.
 
-It does not have to create anything on the fly, everything already exists when you, yes you intrepid blog reader, **make a request** to receive _this_ post to read.
+It does not have to create anything on the fly, everything already exists when you -- yes, you, intrepid blog reader -- **make a request** to receive _this_ post to read.
 
 Static site generators such as [Jekyll](https://jekyllrb.com/) are used to generate a whole website, ready for serving.
 
@@ -43,7 +43,7 @@ Otherwise it is just duplicating the efforts of experienced open-source develope
 I decided to base my blog on [Bootstrap](https://getbootstrap.com/). 
 
 ### Bootstrap
-Bootstrap is an **open-source CSS framework**, originally developed by Twitter. It is excellent for creating *responsive* websites that look and feel great across a range of devices. These folks know what they are doing.
+Bootstrap is an **open-source CSS framework**, originally developed by Twitter. It is excellent for creating *responsive* websites that look and feel _grrreat_ across a range of devices. These folks know what they are doing!
 
 I chose the [Cover template](https://getbootstrap.com/docs/4.0/examples/cover/#) as my starting point for this blog. I like that it is **clean and simple**. 
 
@@ -56,7 +56,9 @@ Although the template is nice and simple, it is also _bloody bleak_. I decided t
 	<li style="padding-bottom: 5px;"><span style="background-color: rgb(248, 248, 248); border-radius: 5px; padding: 4px;"><b>rgb(248, 248, 248)</b></span> for <i>post</i> backgroundage.</li>	
 </ul>
 
-I also _pumped_ up the <a href="#' | relative_url }}" class="btn btn-lg btn-secondary">button</a>s, as follows:
+I also _pumped_ up the <a href="#" class="btn btn-lg btn-secondary">button</a>s, as follows:
+
+
 
 ```css
 .btn,
@@ -77,12 +79,13 @@ I also _pumped_ up the <a href="#' | relative_url }}" class="btn btn-lg btn-seco
   border: .2rem solid rgba(109, 158, 235, 0.5) !important;
 }
 ```
-The `!important` bits really are important, and don't work without it for some reason. There was a pesky issue where the colour of the button kept changing during a click. Probably something to do with the original template and **my noobishness**.
+
+The `!important` bits really are `!important`, and don't work without it for some reason. There was a pesky issue where the colour of the button kept changing during a click. Probably something to do with the original template and **my noobishness**.
 
 #### Mixing up the Fontage
-I wasn't happy with the default font used by the Cover template, it seems too "blocky" to me. So I headed over to [Google Fonts](https://fonts.google.com/) to find a new one.
+I wasn't happy with the default font used by the [Cover template](https://getbootstrap.com/docs/4.0/examples/cover/#). So I headed over to the treasure trove that is [Google Fonts](https://fonts.google.com/) to find a new one.
 
-I have a particular affinity to the [Lato](https://fonts.google.com/?query=lato), as it was selected by my friend [@WebmaestroFR](https://twitter.com/webmaestrofr?lang=en) as the font face for [Visulytix's](http://visulytix.com) visual identity. 
+I have a particular affinity to [Lato](https://fonts.google.com/?query=lato), as it was selected by my friend [@WebmaestroFR](https://twitter.com/webmaestrofr?lang=en) as the font face for [Visulytix's](http://visulytix.com) visual identity. 
 
 The Google Fonts API, makes it incredibly simple to use their fonts on your website. You simply have to `link` to it in your HTML as follows.
 
@@ -141,7 +144,7 @@ And this in the `<head>`:
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 ```
 
-After all that _whackage_, we are good to sit and wait for your mum to follow you.
+After all that _whackage_, we are good to sit and **wait for your mum to follow you**.
 
 #### Spying on your Guests with Google Analytics
 If you're nosey like me, then you might consider setting up [Google Analytics](https://analytics.google.com) on your blog. This will allow you to see your website footfall, which blog articles are most popular, and **how often your mum checks up on you**.
@@ -160,5 +163,9 @@ So go ahead and create an account, it is very simple. You will be given a code s
 ```
 Which you paste somewhere within the `<head>` of your HTML files.
 
-This would be **pretty burdensome** to copy into every single HTML page, and Jekyll's layouts will later become your best friend.
+This would be **pretty burdensome** to copy into every single HTML page, and [Jekyll's layouts]({{page.next.url}}#layouts) will later become your best friend.
 
+## Summary
+Hopefully this post has given a brief introduction to building a basic, but beautiful, [Bootstrap](https://getbootstrap.com/) website. 
+If you go to commit hash [e4be51fe3ec3a00f3477bd82da38aff2dabfcff8](https://github.com/TWRogers/twrogers.github.io/tree/e4be51fe3ec3a00f3477bd82da38aff2dabfcff8),
+then you should see the pure Bootstrap version of this website, before I started playing with **Jekyll** as I do in the [next post]({{page.next.url}}).

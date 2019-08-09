@@ -4,6 +4,7 @@
 
 layout: default
 title: "Home"
+abstract: "Welcome to Thomas Rogers' blog! Here you can find all the stuff he has been working on in machine learning, including his blog posts, projects old and new, publications and curiculum vitae."
 ---
 
 <img src="{{ './assets/images/me.jpg' | relative_url }}" class="rounded-circle" width="150px">

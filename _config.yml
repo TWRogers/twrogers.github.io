@@ -13,14 +13,12 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Your awesome title
-email: your-email@example.com
+title: Thomas Rogers
+email: thomas.rogers08@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Welcome to Thomas Rogers' blog! Here you can find all the stuff he has been working on in machine learning, including his blog posts, projects old and new, publications and curiculum vitae.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://127.0.0.1:4001" # "https://twrogers.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://twrogers.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
 
@@ -31,6 +29,9 @@ plugins:
   - jekyll-feed
 
 highlighter: rouge
+
+permalink: blog/:title:output_ext
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.

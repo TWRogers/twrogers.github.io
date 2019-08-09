@@ -2,6 +2,14 @@
 layout: default
 ---
 <br>
+<div class="PageNavigation">
+  {% if page.previous.url %}
+    <a class="prev" href="{{page.previous.url}}">&laquo; {{page.previous.title}}{% if page.previous.part %} (Part {{ page.previous.part }}){% endif %}</a>
+  {% endif %}
+  {% if page.next.url %}
+    <a class="next" href="{{page.next.url}}">{{page.next.title}}{% if page.previous.part %} (Part {{ page.previous.part }}){% endif %} &raquo;</a>
+  {% endif %}
+</div>
 <div class="card">
     <div class="card-horizontal">
         <div class="img-square-wrapper">
@@ -43,4 +51,12 @@ layout: default
 <div class="page">
 <br>
 {{ content }}
+</div>
+<div class="PageNavigation">
+  {% if page.previous.url %}
+    <a class="prev" href="{{page.previous.url}}">&laquo; {{page.previous.title}}{% if page.previous.part %} (Part {{ page.previous.part }}){% endif %}</a>
+  {% endif %}
+  {% if page.next.url %}
+    <a class="next" href="{{page.next.url}}">{{page.next.title}}{% if page.previous.part %} (Part {{ page.previous.part }}){% endif %} &raquo;</a>
+  {% endif %}
 </div>

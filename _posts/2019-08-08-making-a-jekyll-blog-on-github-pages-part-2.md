@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Making a Jekyll Blog on GitHub Pages"
-abstract: "Creating a statically served blog from scratch on GitHub Pages can be tricky for a beginner in HTML/CSS. Here's my experience on how I dealt with it."
+abstract: "Creating a statically served blog from scratch on GitHub Pages can be tricky for a beginner in HTML/CSS.  In this part, I guide you through how I converted my static Bootstrap website to Jekyll-generated blog."
 date:   2019-08-08
 categories: [HTML, Jekyll, Frontend]
 author: Thomas W. Rogers

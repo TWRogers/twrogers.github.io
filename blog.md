@@ -4,6 +4,7 @@
 
 layout: default
 title: "Blog"
+abstract: "Selection of Thomas Rogers' latest blog posts."
 ---
 <h2 class="cover-heading">Recent Posts</h2>
 <p>Here are my most recent blog posts.</p>

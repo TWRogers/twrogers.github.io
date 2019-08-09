@@ -4,6 +4,7 @@
 
 layout: default
 title: "Projects"
+abstract: "Selection of Thomas Rogers' projects in machine learning, software engineering, and computational physics."
 ---
 
 <h2 class="cover-heading">Projects</h2>
