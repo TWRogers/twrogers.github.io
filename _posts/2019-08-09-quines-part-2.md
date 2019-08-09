@@ -9,7 +9,7 @@ lead_image: quine.png
 further_reading: [["HTML/CSS Quine", "https://secretgeek.github.io/html_wysiwyg/html.html"]]
 part: 2
 ---
-
+## Coming Soon to a Blog Near You
 ```python
 coming_soon = 'coming_soon = %r; print (coming_soon%%coming_soon)'; print (coming_soon%coming_soon)
 ```

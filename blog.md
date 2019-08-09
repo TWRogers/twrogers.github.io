@@ -19,7 +19,7 @@ abstract: "Selection of Thomas Rogers' latest blog posts."
             {% if post.part %}<div class="middle-bottom">Part {{post.part}}</div>{% endif %}
         </div>
         <div class="card-body card-body-left">
-            <h4>{{ post.title }} {% if post.part %}<small>(Part {{post.part}}){% endif %}</small></h4>
+            <h4>{{ post.title }} {% if post.part %}<small>(Part {{post.part}})</small>{% endif %}</h4>
             <p><b>Abstract: </b>{{ post.abstract }}</p>
 			<a href="{{ post.url }}" class="btn btn-secondary">Read More</a>
         </div>

@@ -22,7 +22,7 @@ This is probably because serving a more complex website such as a blog using Git
 * Images
 * Text
 * Date
-* Name (of the poor unfortunate soul who **selflessly** dedicated hours of their life to writing the post).
+* Name (of the poor **unfortunate soul** who selflessly dedicated hours of their life to writing the post).
 
 Unfortunately, deploying standard database technologies such as [MySQL](https://www.mysql.com/) or [MongoDB](https://www.mongodb.com/) is not possible on GitHub Pages. Websites on GitHub Pages must be **statically generated**.
 
