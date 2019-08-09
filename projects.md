@@ -6,7 +6,7 @@ layout: default
 title: "Projects"
 abstract: "Selection of Thomas Rogers' projects in machine learning, software engineering, and computational physics."
 ---
-
+<br>
 <h2 class="cover-heading">Projects</h2>
 <p>Here are some open source projects I have worked on.</p>
 <h3 class="cover-heading">Computational Physics</h3>
@@ -44,7 +44,7 @@ abstract: "Selection of Thomas Rogers' projects in machine learning, software en
 </div>
 </div>
 </div>
-
+<br>
 <h2 class="cover-heading">Publications</h2>
 <p>Here are some some publications.</p>
 <div class="row">
