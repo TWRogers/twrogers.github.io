@@ -15,7 +15,7 @@ This lead me down a tumultuous rabbit hole, and who knows how far it could go? I
 <div class="row">
 {% for post in site.posts %}
 <div class="card">
-    <div class="card-horizontal">
+    <div class="card-horizontal card-horizontal-post">
         <div class="img-square-wrapper">
 			<a href="{{ post.url }}">
             <img src="{{ './assets/images/' | append: post.lead_image | relative_url }}" alt="{{ post.title }}">

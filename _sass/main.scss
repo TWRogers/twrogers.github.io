@@ -145,6 +145,13 @@ body {
     flex: 1 1 auto;
 }
 
+
+.card-horizontal-post {
+    display: flex;
+    flex: 1 1 auto;
+	padding-bottom: 10px;
+}
+
 .card-footer {
   padding: 10px 20px;
 }
