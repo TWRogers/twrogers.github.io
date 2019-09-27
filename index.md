@@ -7,7 +7,7 @@ title: "Home"
 abstract: "Welcome to Thomas Rogers' blog! Here you can find all the stuff he has been working on in machine learning, including his blog posts, projects old and new, publications and curiculum vitae."
 ---
 
-<img src="{{ './assets/images/me.jpg' | relative_url }}" class="rounded-circle" width="150px">
+<img src="{{ './assets/images/me.jpg' | relative_url }}" class="rounded-circle" width="200px">
 <br>
 <h1 class="cover-heading">About Me</h1>
 <p class="lead">Deep Learning Practitioner</p>
