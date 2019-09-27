@@ -12,11 +12,12 @@ abstract: "Selection of Thomas Rogers' projects in machine learning, software en
 <h3 class="cover-heading">Computer Vision</h3>
 <div class="row">
     <div class="card card-small">
-  <img class="card-img-top" src="./assets/images/nyan.png" alt="nyan image pre-processing ">
+  <img class="card-img-top" src="./assets/images/nyan.png" alt="nyan (not your average name) image pre-processing.">
   <div class="card-body">
-    <h5 class="card-title">nyan</h5>
-    <a href="https://github.com/TWRogers/nyan"><i class="fa fa-github" aria-hidden="true"></i></a> &nbsp;
+    <h5 class="card-title">NYAN Image Pre-Processing Library</h5>
+    <a href="https://github.com/TWRogers/nyan"><i class="fa fa-github" aria-hidden="true"></i></a>
   </div>
+</div>
 </div>
 <br>
 <h3 class="cover-heading">Computational Physics</h3>
