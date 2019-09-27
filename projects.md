@@ -9,6 +9,16 @@ abstract: "Selection of Thomas Rogers' projects in machine learning, software en
 <br>
 <h2 class="cover-heading">Projects</h2>
 <p>Here are some open source projects I have worked on.</p>
+<h3 class="cover-heading">Computer Vision</h3>
+<div class="row">
+    <div class="card card-small">
+  <img class="card-img-top" src="./assets/images/nyan.png" alt="nyan image pre-processing ">
+  <div class="card-body">
+    <h5 class="card-title">nyan</h5>
+    <a href="https://github.com/TWRogers/nyan"><i class="fa fa-github" aria-hidden="true"></i></a> &nbsp;
+  </div>
+</div>
+<br>
 <h3 class="cover-heading">Computational Physics</h3>
 <div class="row">
     <div class="card card-small">
