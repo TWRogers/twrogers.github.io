@@ -10,7 +10,7 @@ abstract: "Welcome to Thomas Rogers' blog! Here you can find all the stuff he ha
 <img src="{{ './assets/images/me.jpg' | relative_url }}" class="rounded-circle" width="200px">
 <br>
 <h1 class="cover-heading">About Me</h1>
-<p class="lead">Deep learning practitioner <br> working on problems in quantum discovery.</p>
+<p class="lead">Deep Learning Practitioner <br> working on problems in quantum discovery.</p>
   
   <a href="{{ './assets/docs/thomas_rogers_cv.pdf' | relative_url }}" class="btn btn-lg btn-secondary">
   <i class="fa fa-download" aria-hidden="true"></i>&nbsp; CV</a> 
