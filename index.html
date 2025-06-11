@@ -50,19 +50,21 @@
             font-family: 'Inter', sans-serif;
             line-height: 1.6;
             color: var(--text-dark);
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 75%, #4facfe 100%);
-            background-size: 400% 400%;
-            animation: gradientShift 15s ease infinite;
+            background: linear-gradient(45deg, #ff0080 0%, #ff8c00 12%, #40e0d0 25%, #ee82ee 37%, #32cd32 50%, #ff1493 62%, #00bfff 75%, #ffd700 87%, #ff69b4 100%);
+            background-size: 800% 800%;
+            animation: crazyGradientShift 8s ease infinite;
             height: 100vh;
             overflow: hidden;
             display: flex;
             flex-direction: column;
         }
 
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+        @keyframes crazyGradientShift {
+            0% { background-position: 0% 0%; }
+            25% { background-position: 100% 100%; }
+            50% { background-position: 0% 100%; }
+            75% { background-position: 100% 0%; }
+            100% { background-position: 0% 0%; }
         }
 
         /* Header & Navigation */
@@ -115,6 +117,13 @@
             75% { transform: translateY(-8px) rotate(3deg) scale(1.03); }
         }
 
+        @keyframes heroWobble {
+            0%, 100% { transform: rotate(0deg) scale(1); }
+            25% { transform: rotate(1deg) scale(1.02); }
+            50% { transform: rotate(0deg) scale(0.98); }
+            75% { transform: rotate(-1deg) scale(1.01); }
+        }
+
         .navbar-nav .nav-link {
             color: var(--text-dark) !important;
             font-weight: 600;
@@ -153,6 +162,9 @@
             z-index: 10;
             max-width: 800px;
             width: 100%;
+            animation: heroWobble 4s ease-in-out infinite;
+            border: 3px solid transparent;
+            background-clip: padding-box;
         }
 
         .hero-title {
@@ -191,23 +203,40 @@
 
         .floating-emoji:nth-child(1) { top: 15%; left: 8%; animation-delay: 0s; }
         .floating-emoji:nth-child(2) { top: 25%; right: 12%; animation-delay: 1s; }
-        .floating-emoji:nth-child(3) { top: 45%; left: 3%; animation-delay: 2s; }
+        .floating-emoji:nth-child(3) { top: 45%; left: 3%; animation: floatAndSpin 6s ease-in-out infinite; animation-delay: 2s; }
         .floating-emoji:nth-child(4) { bottom: 35%; right: 8%; animation-delay: 3s; }
         .floating-emoji:nth-child(5) { bottom: 25%; left: 12%; animation-delay: 4s; }
-        .floating-emoji:nth-child(6) { top: 35%; right: 5%; animation-delay: 5s; }
+        .floating-emoji:nth-child(6) { top: 35%; right: 5%; animation: floatAndSpin 6s ease-in-out infinite; animation-delay: 5s; }
         .floating-emoji:nth-child(7) { bottom: 45%; right: 20%; animation-delay: 6s; }
         .floating-emoji:nth-child(8) { top: 55%; left: 18%; animation-delay: 7s; }
-        .floating-emoji:nth-child(9) { top: 65%; right: 25%; animation-delay: 8s; }
+        .floating-emoji:nth-child(9) { top: 65%; right: 25%; animation: floatAndSpin 6s ease-in-out infinite; animation-delay: 8s; }
         .floating-emoji:nth-child(10) { bottom: 55%; left: 25%; animation-delay: 9s; }
         .floating-emoji:nth-child(11) { top: 75%; left: 35%; animation-delay: 10s; }
-        .floating-emoji:nth-child(12) { bottom: 65%; right: 35%; animation-delay: 11s; }
+        .floating-emoji:nth-child(12) { bottom: 65%; right: 35%; animation: floatAndSpin 6s ease-in-out infinite; animation-delay: 11s; }
         .floating-emoji:nth-child(13) { top: 85%; right: 45%; animation-delay: 12s; }
         .floating-emoji:nth-child(14) { bottom: 75%; left: 45%; animation-delay: 13s; }
+        .floating-emoji:nth-child(15) { top: 20%; left: 50%; animation: floatAndSpin 6s ease-in-out infinite; animation-delay: 14s; }
+        .floating-emoji:nth-child(16) { bottom: 20%; right: 50%; animation-delay: 15s; }
+        .floating-emoji:nth-child(17) { top: 40%; left: 70%; animation-delay: 16s; }
+        .floating-emoji:nth-child(18) { bottom: 40%; right: 70%; animation: floatAndSpin 6s ease-in-out infinite; animation-delay: 17s; }
+        .floating-emoji:nth-child(19) { top: 60%; left: 80%; animation-delay: 18s; }
+        .floating-emoji:nth-child(20) { bottom: 60%; right: 80%; animation-delay: 19s; }
+        .floating-emoji:nth-child(21) { top: 30%; left: 90%; animation: floatAndSpin 6s ease-in-out infinite; animation-delay: 20s; }
+        .floating-emoji:nth-child(22) { bottom: 30%; right: 90%; animation-delay: 21s; }
+        .floating-emoji:nth-child(23) { top: 70%; left: 60%; animation-delay: 22s; }
+        .floating-emoji:nth-child(24) { bottom: 70%; right: 60%; animation: floatAndSpin 6s ease-in-out infinite; animation-delay: 23s; }
 
         @keyframes float {
             0%, 100% { transform: translateY(0px) rotate(0deg); }
             33% { transform: translateY(-20px) rotate(5deg); }
             66% { transform: translateY(-10px) rotate(-5deg); }
+        }
+
+        @keyframes floatAndSpin {
+            0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
+            25% { transform: translateY(-15px) rotate(90deg) scale(1.1); }
+            50% { transform: translateY(-25px) rotate(180deg) scale(0.9); }
+            75% { transform: translateY(-10px) rotate(270deg) scale(1.05); }
         }
 
         /* Shooting Stars */
@@ -239,6 +268,26 @@
             animation-delay: 6s; 
             animation-duration: 9s;
         }
+        .shooting-star:nth-child(19) { 
+            top: 15%; 
+            animation-delay: 8s; 
+            animation-duration: 5s;
+        }
+        .shooting-star:nth-child(20) { 
+            top: 85%; 
+            animation-delay: 10s; 
+            animation-duration: 6s;
+        }
+        .shooting-star:nth-child(21) { 
+            top: 25%; 
+            animation-delay: 12s; 
+            animation-duration: 7s;
+        }
+        .shooting-star:nth-child(22) { 
+            top: 55%; 
+            animation-delay: 14s; 
+            animation-duration: 8s;
+        }
 
         @keyframes shootingStar {
             0% {
@@ -260,6 +309,28 @@
                 transform: rotate(-45deg) scale(0.5);
             }
         }
+
+        /* CRAZY Spinning Elements */
+        .spinner {
+            position: absolute;
+            font-size: 3rem;
+            animation: crazySpinFloat 3s linear infinite;
+            opacity: 0.8;
+            z-index: 5;
+        }
+
+        .spinner:nth-child(25) { top: 10%; right: 10%; animation-delay: 0s; }
+        .spinner:nth-child(26) { bottom: 10%; left: 10%; animation-delay: 1s; }
+
+        @keyframes crazySpinFloat {
+            0% { transform: rotate(0deg) scale(1) translateY(0px); }
+            25% { transform: rotate(90deg) scale(1.2) translateY(-20px); }
+            50% { transform: rotate(180deg) scale(0.8) translateY(-40px); }
+            75% { transform: rotate(270deg) scale(1.5) translateY(-20px); }
+            100% { transform: rotate(360deg) scale(1) translateY(0px); }
+        }
+
+
 
         /* Status badges */
         .status-badge {
@@ -555,7 +626,7 @@
     </style>
 </head>
 <body>
-    <!-- Floating Emojis -->
+    <!-- CRAZY Floating Emojis -->
     <div class="floating-emoji">🤖</div>
     <div class="floating-emoji">⚡</div>
     <div class="floating-emoji">🧠</div>
@@ -570,12 +641,32 @@
     <div class="floating-emoji">🔥</div>
     <div class="floating-emoji">💎</div>
     <div class="floating-emoji">🌈</div>
+    <div class="floating-emoji">🎉</div>
+    <div class="floating-emoji">🎊</div>
+    <div class="floating-emoji">🎈</div>
+    <div class="floating-emoji">🎆</div>
+    <div class="floating-emoji">🎇</div>
+    <div class="floating-emoji">🌪️</div>
+    <div class="floating-emoji">⚡</div>
+    <div class="floating-emoji">🔥</div>
+    <div class="floating-emoji">💥</div>
+    <div class="floating-emoji">🌟</div>
     
-    <!-- Shooting Stars -->
+    <!-- MEGA Shooting Stars -->
     <div class="shooting-star">💫</div>
     <div class="shooting-star">⭐</div>
     <div class="shooting-star">✨</div>
     <div class="shooting-star">🌟</div>
+    <div class="shooting-star">🚀</div>
+    <div class="shooting-star">💥</div>
+    <div class="shooting-star">🎆</div>
+    <div class="shooting-star">⚡</div>
+    
+    <!-- Spinning Elements -->
+    <!-- <div class="spinner">🌀</div>
+    <div class="spinner">🔄</div> -->
+    
+
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
@@ -610,7 +701,7 @@
             </h1>
             <p class="hero-subtitle">✨ Where AI meets creativity! ✨</p>
             <p class="hero-description">
-                🚀 Building the future with code and curiosity 🔬<br>
+                🚀 Building the future with code and curiosity 🔬 <br>
                 Our friendly AI robots are cooking up something amazing! 👨‍🍳
             </p>
         </div>
@@ -673,50 +764,74 @@
             observer.observe(el);
         });
 
-        // Random emoji animation
+        // CRAZY Random emoji animation
         function addRandomEmoji() {
-            const emojis = ['🤖', '⚡', '🧠', '💫', '🔮', '🌟', '✨', '🚀', '💡', '🎯', '⭐', '🔥'];
+            const emojis = ['🤖', '⚡', '🧠', '💫', '🔮', '🌟', '✨', '🚀', '💡', '🎯', '⭐', '🔥', '🎉', '🎊', '🎈', '🎆', '🎇', '🌪️', '💥', '🌈', '🦄', '👾', '🎮', '🕹️', '🎪', '🎭', '🎨', '🎵', '🎶', '🎤', '🎸', '🥳', '🤩', '😎', '🤯'];
             const emoji = document.createElement('div');
             emoji.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
             emoji.style.position = 'fixed';
             emoji.style.left = Math.random() * 100 + 'vw';
             emoji.style.top = '100vh';
-            emoji.style.fontSize = '2rem';
+            emoji.style.fontSize = (Math.random() * 2 + 1.5) + 'rem';
             emoji.style.zIndex = '1000';
             emoji.style.pointerEvents = 'none';
-            emoji.style.animation = 'floatUp 4s ease-out forwards';
+            emoji.style.animation = `floatUp ${Math.random() * 3 + 2}s ease-out forwards`;
+            emoji.style.transform = `rotate(${Math.random() * 360}deg)`;
             
             document.body.appendChild(emoji);
             
-            setTimeout(() => emoji.remove(), 4000);
+            setTimeout(() => emoji.remove(), 5000);
         }
 
-        // Add floating emoji more frequently
-        setInterval(addRandomEmoji, 3000);
+        // Add floating emoji SUPER frequently
+        setInterval(addRandomEmoji, 1500);
         
-        // Add emoji bursts occasionally
+        // Add MEGA emoji bursts
         function addEmojiBurst() {
-            for(let i = 0; i < 5; i++) {
-                setTimeout(() => addRandomEmoji(), i * 300);
+            for(let i = 0; i < 10; i++) {
+                setTimeout(() => addRandomEmoji(), i * 150);
             }
         }
         
-        // Trigger emoji bursts every 15 seconds
-        setInterval(addEmojiBurst, 15000);
+        // Trigger emoji bursts every 8 seconds
+        setInterval(addEmojiBurst, 8000);
 
-        // Add CSS for floating up animation
+        // Add screen shake effect
+        function addScreenShake() {
+            document.body.style.animation = 'screenShake 0.5s ease-in-out';
+            setTimeout(() => {
+                document.body.style.animation = '';
+            }, 500);
+        }
+
+        // Random screen shakes
+        setInterval(addScreenShake, 20000);
+
+        // Add CSS for floating up animation and screen shake
         const style = document.createElement('style');
         style.textContent = `
             @keyframes floatUp {
                 to {
-                    transform: translateY(-100vh) rotate(360deg);
+                    transform: translateY(-100vh) rotate(720deg) scale(2);
                     opacity: 0;
                 }
+            }
+            @keyframes screenShake {
+                0%, 100% { transform: translateX(0); }
+                10% { transform: translateX(-10px) rotate(1deg); }
+                20% { transform: translateX(10px) rotate(-1deg); }
+                30% { transform: translateX(-8px) rotate(1deg); }
+                40% { transform: translateX(8px) rotate(-1deg); }
+                50% { transform: translateX(-6px) rotate(1deg); }
+                60% { transform: translateX(6px) rotate(-1deg); }
+                70% { transform: translateX(-4px) rotate(1deg); }
+                80% { transform: translateX(4px) rotate(-1deg); }
+                90% { transform: translateX(-2px) rotate(1deg); }
             }
         `;
         document.head.appendChild(style);
 
-        // Interactive logo clicks
+        // MEGA Interactive logo clicks
         document.querySelectorAll('.brand-logo, .hero-logo').forEach(logo => {
             logo.addEventListener('click', function() {
                 this.style.animation = 'none';
@@ -724,12 +839,53 @@
                     this.style.animation = '';
                 }, 100);
                 
-                // Add some sparkles
-                for(let i = 0; i < 5; i++) {
-                    setTimeout(() => addRandomEmoji(), i * 200);
+                // EXPLOSION of emojis!
+                for(let i = 0; i < 20; i++) {
+                    setTimeout(() => addRandomEmoji(), i * 50);
                 }
+                
+                // Screen shake on click
+                addScreenShake();
+                
+                // Change background temporarily
+                document.body.style.filter = 'hue-rotate(180deg) saturate(2)';
+                setTimeout(() => {
+                    document.body.style.filter = '';
+                }, 1000);
             });
         });
+
+        // Click anywhere for fireworks
+        document.addEventListener('click', function(e) {
+            // Create explosion at click point
+            for(let i = 0; i < 8; i++) {
+                const firework = document.createElement('div');
+                firework.innerHTML = ['💥', '✨', '🎆', '🎇', '💫'][Math.floor(Math.random() * 5)];
+                firework.style.position = 'fixed';
+                firework.style.left = e.clientX + 'px';
+                firework.style.top = e.clientY + 'px';
+                firework.style.fontSize = '2rem';
+                firework.style.zIndex = '9999';
+                firework.style.pointerEvents = 'none';
+                firework.style.animation = `explode 1s ease-out forwards`;
+                firework.style.animationDelay = (i * 0.1) + 's';
+                
+                document.body.appendChild(firework);
+                
+                setTimeout(() => firework.remove(), 1000);
+            }
+        });
+
+        // Add explosion animation
+        const explosionStyle = document.createElement('style');
+        explosionStyle.textContent = `
+            @keyframes explode {
+                0% { transform: scale(0) rotate(0deg); opacity: 1; }
+                50% { transform: scale(1.5) rotate(180deg); opacity: 0.8; }
+                100% { transform: scale(3) rotate(360deg); opacity: 0; }
+            }
+        `;
+        document.head.appendChild(explosionStyle);
     </script>
 </body>
 </html> 
