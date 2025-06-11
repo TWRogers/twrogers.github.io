@@ -376,39 +376,154 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .hero-title {
-                font-size: 2.2rem;
+            body {
+                line-height: 1.4;
             }
             
-            .hero-subtitle {
+            .navbar {
+                margin: 0 5px;
+                padding: 1rem 0;
+            }
+            
+            .navbar-brand {
+                font-size: 1.3rem;
+                padding: 0;
+            }
+            
+            .brand-logo {
+                width: 32px;
+                height: 32px;
+                margin-right: 8px;
+            }
+            
+            .navbar .container {
+                padding: 0 1rem;
+            }
+            
+            .navbar-nav .nav-link {
+                padding: 4px 8px !important;
                 font-size: 1.2rem;
             }
             
-            .hero-description {
-                font-size: 1rem;
+            .navbar-toggler {
+                padding: 0.25rem 0.5rem;
+                border: none;
+            }
+            
+            .hero-section {
+                padding: 10px 0;
             }
             
             .hero-content {
-                padding: 1.5rem;
+                padding: 1.5rem 1rem;
                 margin: 0 10px;
+                border-radius: 20px;
+            }
+            
+            .hero-logo {
+                width: 100px;
+                height: 100px;
+                margin-bottom: 1rem;
+            }
+            
+            .hero-title {
+                font-size: 2rem;
+                margin-bottom: 0.75rem;
+                line-height: 1.2;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+                margin-bottom: 0.75rem;
+            }
+            
+            .hero-description {
+                font-size: 0.95rem;
+                margin-bottom: 1rem;
+                line-height: 1.5;
+            }
+            
+            .footer {
+                margin: 0 10px;
+                padding: 0.75rem 0;
+            }
+            
+            .footer p {
+                font-size: 0.9rem;
+                margin-bottom: 0.25rem;
+            }
+            
+            .floating-emoji {
+                display: none;
+            }
+            
+            .shooting-star {
+                display: none;
+            }
+        }
+
+        /* Extra small screens (iPhone portrait) */
+        @media (max-width: 480px) {
+            .navbar {
+                margin: 0 2px;
+                padding: 0.875rem 0;
+            }
+            
+            .navbar-brand {
+                font-size: 1.1rem;
+                padding: 0;
+            }
+            
+            .brand-logo {
+                width: 28px;
+                height: 28px;
+                margin-right: 6px;
+            }
+            
+            .navbar .container {
+                padding: 0 0.75rem;
+            }
+            
+            .navbar-nav .nav-link {
+                padding: 2px 6px !important;
+                font-size: 1.1rem;
+            }
+            
+            .navbar-toggler {
+                padding: 0.2rem 0.4rem;
+                border: none;
+                font-size: 0.9rem;
+            }
+            
+            .hero-content {
+                padding: 1.25rem 0.75rem;
+                margin: 0 5px;
             }
             
             .hero-logo {
                 width: 80px;
                 height: 80px;
-                margin-bottom: 1rem;
+                margin-bottom: 0.75rem;
             }
             
-            .navbar {
-                margin: 0 10px;
+            .hero-title {
+                font-size: 1.75rem;
+                margin-bottom: 0.5rem;
             }
             
-            .footer {
-                margin: 0 10px;
+            .hero-subtitle {
+                font-size: 1rem;
+                margin-bottom: 0.5rem;
             }
             
-            .floating-emoji {
-                display: none;
+            .hero-description {
+                font-size: 0.9rem;
+                margin-bottom: 0.75rem;
+                line-height: 1.4;
+            }
+            
+            .navbar, .footer {
+                margin: 0 5px;
             }
         }
 
