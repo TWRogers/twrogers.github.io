@@ -188,11 +188,68 @@
         .floating-emoji:nth-child(6) { top: 35%; right: 5%; animation-delay: 5s; }
         .floating-emoji:nth-child(7) { bottom: 45%; right: 20%; animation-delay: 6s; }
         .floating-emoji:nth-child(8) { top: 55%; left: 18%; animation-delay: 7s; }
+        .floating-emoji:nth-child(9) { top: 65%; right: 25%; animation-delay: 8s; }
+        .floating-emoji:nth-child(10) { bottom: 55%; left: 25%; animation-delay: 9s; }
+        .floating-emoji:nth-child(11) { top: 75%; left: 35%; animation-delay: 10s; }
+        .floating-emoji:nth-child(12) { bottom: 65%; right: 35%; animation-delay: 11s; }
+        .floating-emoji:nth-child(13) { top: 85%; right: 45%; animation-delay: 12s; }
+        .floating-emoji:nth-child(14) { bottom: 75%; left: 45%; animation-delay: 13s; }
 
         @keyframes float {
             0%, 100% { transform: translateY(0px) rotate(0deg); }
             33% { transform: translateY(-20px) rotate(5deg); }
             66% { transform: translateY(-10px) rotate(-5deg); }
+        }
+
+        /* Shooting Stars */
+        .shooting-star {
+            position: absolute;
+            font-size: 1.5rem;
+            opacity: 0;
+            animation: shootingStar 8s linear infinite;
+            pointer-events: none;
+        }
+
+        .shooting-star:nth-child(15) { 
+            top: 10%; 
+            animation-delay: 0s; 
+            animation-duration: 6s;
+        }
+        .shooting-star:nth-child(16) { 
+            top: 30%; 
+            animation-delay: 2s; 
+            animation-duration: 7s;
+        }
+        .shooting-star:nth-child(17) { 
+            top: 50%; 
+            animation-delay: 4s; 
+            animation-duration: 8s;
+        }
+        .shooting-star:nth-child(18) { 
+            top: 70%; 
+            animation-delay: 6s; 
+            animation-duration: 9s;
+        }
+
+        @keyframes shootingStar {
+            0% {
+                left: -10%;
+                opacity: 0;
+                transform: rotate(-45deg) scale(0.5);
+            }
+            10% {
+                opacity: 1;
+                transform: rotate(-45deg) scale(1);
+            }
+            90% {
+                opacity: 1;
+                transform: rotate(-45deg) scale(1);
+            }
+            100% {
+                left: 110%;
+                opacity: 0;
+                transform: rotate(-45deg) scale(0.5);
+            }
         }
 
         /* Status badges */
@@ -288,7 +345,7 @@
         .footer {
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(20px);
-            padding: 3rem 0;
+            padding: 1rem 0;
             margin: 0 20px;
             border-radius: 25px 25px 0 0;
             text-align: center;
@@ -374,6 +431,18 @@
     <div class="floating-emoji">🌟</div>
     <div class="floating-emoji">✨</div>
     <div class="floating-emoji">🚀</div>
+    <div class="floating-emoji">💡</div>
+    <div class="floating-emoji">🎯</div>
+    <div class="floating-emoji">⭐</div>
+    <div class="floating-emoji">🔥</div>
+    <div class="floating-emoji">💎</div>
+    <div class="floating-emoji">🌈</div>
+    
+    <!-- Shooting Stars -->
+    <div class="shooting-star">💫</div>
+    <div class="shooting-star">⭐</div>
+    <div class="shooting-star">✨</div>
+    <div class="shooting-star">🌟</div>
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
@@ -442,32 +511,7 @@
 
     <!-- Custom JavaScript -->
     <script>
-        // Fun interactions
-        function wiggleButton(button) {
-            button.classList.add('wiggle');
-            setTimeout(() => button.classList.remove('wiggle'), 500);
-            
-            // Add some fun messages
-            const messages = [
-                "🎉 Patience, young padawan!",
-                "🔥 Good things come to those who wait!",
-                "🚀 T-minus... well, soon!",
-                "🤖 Our robots are still debugging!",
-                "✨ Magic takes time to brew!",
-                "🎯 Almost there... keep watching!"
-            ];
-            
-            const randomMessage = messages[Math.floor(Math.random() * messages.length)];
-            button.innerHTML = `<i class="fas fa-spinner fa-spin mr-2"></i>${randomMessage}`;
-            
-            setTimeout(() => {
-                button.innerHTML = '👀 Watch this space! 🎬';
-            }, 3000);
-        }
-
-        function comingSoon() {
-            alert('🚀 Coming soon! Our robots are still working on this feature! 🤖✨');
-        }
+        // Fun interactions - cleaned up unused code
 
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -521,8 +565,18 @@
             setTimeout(() => emoji.remove(), 4000);
         }
 
-        // Add floating emoji every few seconds
-        setInterval(addRandomEmoji, 5000);
+        // Add floating emoji more frequently
+        setInterval(addRandomEmoji, 3000);
+        
+        // Add emoji bursts occasionally
+        function addEmojiBurst() {
+            for(let i = 0; i < 5; i++) {
+                setTimeout(() => addRandomEmoji(), i * 300);
+            }
+        }
+        
+        // Trigger emoji bursts every 15 seconds
+        setInterval(addEmojiBurst, 15000);
 
         // Add CSS for floating up animation
         const style = document.createElement('style');
