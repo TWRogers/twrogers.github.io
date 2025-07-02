@@ -509,6 +509,7 @@
                 }
                 
                 screenShake();
+                flashColorShift();
             });
         });
 
@@ -573,6 +574,15 @@
             if (!cloudBox) return;
             const bolts = Math.floor(Math.random()*6)+3; // 1-3 bolts
             for(let i=0;i<bolts;i++) setTimeout(()=>spawnBolt(cloudBox), i*100);
+        }
+
+        // Flashing hue shift effect
+        function flashColorShift() {
+            const flashes = 8;
+            for(let i=0;i<flashes;i++){
+                setTimeout(()=>{document.body.style.filter='hue-rotate(180deg) saturate(2)';}, i*200);
+                setTimeout(()=>{document.body.style.filter='';}, i*200+100);
+            }
         }
     </script>
 </body>
