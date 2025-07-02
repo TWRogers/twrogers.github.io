@@ -299,6 +299,9 @@
         @keyframes floatUp {
             to { transform: translateY(-100vh) rotate(720deg) scale(2); opacity: 0; }
         }
+        @keyframes floatDown {
+            to { transform: translateY(100vh) rotate(720deg) scale(2); opacity: 0; }
+        }
         @keyframes screenShake {
             0%, 100% { transform: translateX(0); }
             10%, 30%, 50%, 70%, 90% { transform: translateX(-10px) rotate(1deg); }
@@ -435,11 +438,11 @@
             Object.assign(el.style, {
                 position: 'fixed',
                 left: Math.random() * 100 + 'vw',
-                top: '100vh',
+                top: '-10vh',
                 fontSize: (Math.random() * 2 + 1.5) + 'rem',
-                zIndex: '1000',
+                zIndex: '-1',
                 pointerEvents: 'none',
-                animation: `floatUp ${Math.random() * 3 + 2}s ease-out forwards`,
+                animation: `floatDown ${Math.random() * 3 + 2}s ease-out forwards`,
                 transform: `rotate(${Math.random() * 360}deg)`
             });
             
