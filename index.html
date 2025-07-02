@@ -167,6 +167,42 @@
             line-height: 1.4;
         }
 
+        /* Cloud hero layout */
+        .cloud-container {
+            position: relative;
+            width: 100%;
+            max-width: 900px;
+            height: 360px;
+            margin: 0 auto;
+        }
+
+        .cloud {
+            position: absolute;
+            filter: drop-shadow(0 8px 20px rgba(0,0,0,0.1));
+        }
+
+        .main-cloud  { width: 75%; left: 45%; top: 60%; transform: translate(-50%, -45%); }
+
+        .logo-on-cloud {
+            position: absolute;
+            width: 120px;
+            left: 45%;
+            top: 15%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        .cloud-text {
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            left: 0;
+            transform: translateY(-20%);
+            text-align: center;
+            z-index: 3;
+        }
+
         /* Floating animations - consolidated */
         .floating-emoji {
             position: absolute;
@@ -232,12 +268,24 @@
             .hero-description { font-size: 0.9rem; }
             .floating-emoji:nth-child(n+13) { display: none; }
             .shooting-star:nth-child(n+5) { display: none; }
+            .main-cloud { width: 90%; left: 50%; top: 60%; transform: translate(-50%, -50%); }
+            .logo-on-cloud { width: 90px; top: 22%; left: 50%; }
+            .cloud-text { top: 60%; left: 5%; transform: translateY(-50%); }
+            .hero-title { font-size: 1.5rem; }
+            .hero-subtitle { font-size: 1rem; }
+            .cloud-text p { font-size: 0.75rem; }
         }
 
         @media (max-width: 480px) {
             .navbar { margin: 0 2px; }
             .floating-emoji:nth-child(n+9) { display: none; }
             .shooting-star:nth-child(n+4) { display: none; }
+            .main-cloud { width: 95%; left: 50%; top: 60%; transform: translate(-50%, -50%); }
+            .logo-on-cloud { width: 70px; top: 22%; left: 50%; }
+            .cloud-text { top: 60%; left: 5%; transform: translateY(-50%); }
+            .hero-title { font-size: 1.25rem; }
+            .hero-subtitle { font-size: 0.9rem; }
+            .cloud-text p { font-size: 0.7rem; }
         }
 
         /* Animations */
@@ -260,6 +308,24 @@
             0% { transform: scale(0) rotate(0deg); opacity: 1; }
             50% { transform: scale(1.5) rotate(180deg); opacity: 0.8; }
             100% { transform: scale(3) rotate(360deg); opacity: 0; }
+        }
+
+        .navbar, .footer { display: none !important; }
+
+        /* Dynamic lightning emoji bolts */
+        .lightning-bolt {
+            position: absolute;
+            font-size: 2.5rem;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            z-index: 4;
+            pointer-events: none;
+            color:#ffeb3b;
+            text-shadow: 0 0 6px #ffff33, 0 0 12px #ffeb3b;
+            filter: hue-rotate(0deg) !important;
+            transition: transform 0.7s ease-out, opacity 0.7s ease-out;
+            transform: translate(0,0) scale(0.3);
         }
     </style>
     
@@ -324,14 +390,23 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero-section">
-        <div class="hero-content glass fade-in">
-            <img src="./assets/images/logo-transparent.png" alt="Bright Matter Labs Robot" class="hero-logo">
-            <h1 class="hero-title">Bright Matter Labs</h1>
-            <p class="hero-subtitle">✨ Where AI meets creativity! ✨</p>
-            <p class="hero-description">
-                🚀 Building the future with code and curiosity 🔬 <br>
-                Our friendly AI robots are cooking up something amazing! 👨‍🍳
-            </p>
+        <div class="cloud-container fade-in">
+            <!-- Layered Clouds -->
+            <svg class="cloud main-cloud" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" preserveAspectRatio="xMidYMid meet">
+                <g fill="white" stroke="white" stroke-width="11" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M315.706817786731 369.6335212747464 A73 73 0 1 1 221.9895285561446 470.1570538425945 A73 73 0 1 1 157.06806690156145 345.28794613184107 A73 73 0 1 1 362.56544502617805 210.47120418848164 A73 73 0 1 1 593.1937172774869 255.23560209424087 A73 73 0 1 1 735.8638701913244 393.71728004335733 A73 73 0 1 1 542.6701583462861 476.96335334178667 A73 73 0 1 1 610.2094240837696 459.94764397905766 A73 73 0 1 1 315.706817786731 369.6335212747464 Z"/>
+                </g>
+            </svg>
+
+            <!-- Logo on cloud -->
+            <img src="./assets/images/logo-transparent.png" alt="Bright Matter Labs Robot" class="hero-logo logo-on-cloud">
+
+            <!-- Branding Text -->
+            <div class="cloud-text">
+                <h1 class="hero-title">Bright Matter Labs</h1>
+                <p class="hero-subtitle">✨ Where AI meets creativity! ✨</p>
+                <p style="font-size:0.8rem;color:var(--text-dark);margin-top:1.2rem;">&copy; 2025 Bright Matter Labs Ltd.</p>
+            </div>
         </div>
     </section>
 
@@ -373,7 +448,7 @@
         }
 
         function createExplosion(x, y, count = 8) {
-            const explosionEmojis = ['💥', '✨', '🎆', '🎇', '💫'];
+            const explosionEmojis = ['💥', '✨', '💫'];
             for(let i = 0; i < count; i++) {
                 const firework = document.createElement('div');
                 firework.innerHTML = explosionEmojis[Math.floor(Math.random() * explosionEmojis.length)];
@@ -394,7 +469,11 @@
         }
 
         function screenShake() {
+            // initiate body shake
             document.body.style.animation = 'screenShake 0.5s ease-in-out';
+            // spawn synchronized lightning burst
+            createLightning();
+            // clear shake after animation
             setTimeout(() => document.body.style.animation = '', 500);
         }
 
@@ -430,10 +509,6 @@
                 }
                 
                 screenShake();
-                
-                // Temporary color shift
-                document.body.style.filter = 'hue-rotate(180deg) saturate(2)';
-                setTimeout(() => document.body.style.filter = '', 1000);
             });
         });
 
@@ -444,7 +519,7 @@
                 setTimeout(() => createFloatingElement(emojis[Math.floor(Math.random() * emojis.length)]), i * 150);
             }
         }, 8000);
-        setInterval(screenShake, 20000);
+        setInterval(screenShake, 10000);
 
         // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -469,6 +544,36 @@
 
         // Position emojis once everything is loaded
         positionFloatingEmojis();
+
+        // === Lightning bolt effect ===
+        function spawnBolt(cloudBox){
+            const bolt = document.createElement('div');
+            bolt.className = 'lightning-bolt';
+            bolt.innerHTML = '⚡';
+            const cloudWidth = cloudBox.offsetWidth;
+            const cloudHeight = cloudBox.offsetHeight;
+            // spawn from middle top area
+            bolt.style.left = (Math.random()*0.6 + 0.2) * cloudWidth + 'px';
+            bolt.style.top  = cloudHeight*0.4 + 'px';
+            bolt.style.fontSize = (Math.random()*3 + 3)+'rem';
+            cloudBox.appendChild(bolt);
+
+            // compute scatter destination
+            const dx = (Math.random()*2 -1)*120; // -120..120px
+            const dy = (Math.random()*2 -1)*120; // -120..120px
+            requestAnimationFrame(()=>{ 
+                bolt.style.opacity = 1;
+                bolt.style.transform = `translate(${dx}px, ${dy}px) scale(1.3) rotate(${Math.random()*40-20}deg)`;
+            });
+            setTimeout(()=> bolt.remove(), 900);
+        }
+
+        function createLightning() {
+            const cloudBox = document.querySelector('.cloud-container');
+            if (!cloudBox) return;
+            const bolts = Math.floor(Math.random()*6)+3; // 1-3 bolts
+            for(let i=0;i<bolts;i++) setTimeout(()=>spawnBolt(cloudBox), i*100);
+        }
     </script>
 </body>
 </html> 
