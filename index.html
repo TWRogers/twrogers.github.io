@@ -281,7 +281,7 @@
             .floating-emoji:nth-child(n+9) { display: none; }
             .shooting-star:nth-child(n+4) { display: none; }
             .main-cloud { width: 95%; left: 50%; top: 60%; transform: translate(-50%, -50%); }
-            .logo-on-cloud { width: 70px; top: 22%; left: 50%; }
+            .logo-on-cloud { width: 70px; top: 25%; left: 50%; }
             .cloud-text { top: 60%; left: 5%; transform: translateY(-50%); }
             .hero-title { font-size: 1.25rem; }
             .hero-subtitle { font-size: 0.9rem; }
@@ -584,6 +584,36 @@
                 setTimeout(()=>{document.body.style.filter='';}, i*200+100);
             }
         }
+
+        // ===== Pull-to-refresh: drag down to reload the page =====
+        (function enablePullToRefresh(){
+            let startY = null;
+            const THRESHOLD = 80; // pixels pulled down required to trigger refresh
+
+            // Record initial Y when touch starts at top of the page
+            window.addEventListener('touchstart', (e) => {
+                if (document.scrollingElement.scrollTop === 0) {
+                    startY = e.touches[0].clientY;
+                } else {
+                    startY = null;
+                }
+            }, { passive: true });
+
+            // Check distance moved; if beyond threshold then reload
+            window.addEventListener('touchmove', (e) => {
+                if (startY === null) return;
+                const currentY = e.touches[0].clientY;
+                if (currentY - startY > THRESHOLD) {
+                    startY = null;
+                    location.reload();
+                }
+            }, { passive: true });
+
+            // Reset on touch end
+            window.addEventListener('touchend', () => {
+                startY = null;
+            });
+        })();
     </script>
 </body>
 </html> 
